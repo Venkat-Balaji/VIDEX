@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarization</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <form id="summarize-form">
+            <h1>Video Summarization</h1>
+            <input type="text" id="video-url" placeholder="Enter Video URL" required>
+            <button type="button" id="summarize-button" onclick="summarizeVideo()">
+                Summarize Video
+            </button>
+            <div id="loader-container" class="hidden">
+                <div class="loader"></div>
+            </div>
+            <div id="result-container" class="hidden">
+                <h2>Summary:</h2>
+                <p id="summary-text"></p>
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
